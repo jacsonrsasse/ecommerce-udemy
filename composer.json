@@ -1,0 +1,20 @@
+{
+  "name": "jacsonrsasse/ecommerce-udemy",
+  "authors": [
+    {
+      "name": "Jacson R. Sasse",
+      "email": "jacson.r.s@hotmail.com"
+    }
+  ],
+  "require": {
+    "phpmailer/phpmailer": "5.2.22",
+    "slim/slim": "2.0",
+    "rain/raintpl": "3.0.0",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ecommerce\\": "src\\"
+    }
+  }
+}
