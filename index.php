@@ -1,23 +1,19 @@
 <?php
 
-use Hcode\DB\Sql;
+use Ecommerce\DB\Sql;
+use Slim\Slim;
+use Ecommerce\Page;
 
 require_once("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+$app = new Slim();
 
 $app->config('debug', true);
 
-$app->get('/', function() {
-    
-	$oSql = new Sql();
+$app->get('/', function () {
 
-	$aResults = $oSql->select("SELECT * from tb_users");
-
-	echo json_encode($aResults);
-
+    $page = new Page();
+    $page->setTpl('index');
 });
 
 $app->run();
-
- ?>
